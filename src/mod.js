@@ -24,17 +24,6 @@ class Mod
 			}
 		}
 		
-		// deal with edge cases
-		
-		// debug
-		const debug = true;
-		
-		if (debug) {
-			for (const item in database.templates.items) {
-				database.templates.items[item]._props.ExaminedByDefault = true;
-			}
-		}
-		
 		// Modify quests
 		if (config.EnableQuestChanges) {
 			const armoredVests = [
