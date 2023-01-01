@@ -29,12 +29,12 @@
 		"ShortName": "Flak",
 		"Description": "A class III body armor used by PMCs and security forces all around the world."
     },
-	"AddGearTan_Trooper": {
+	"AddGearTan_Trooper_USEC": {
         "Name": "HighCom Trooper TFO body armor (Desert Tan, USEC)",
 		"ShortName": "Trooper",
 		"Description": "A plate armor vest by HighCom, popular among USEC PMCs. The lightweight AR500 class 4 (Russian GOST) protection plates cover only the chest and back areas. Desert Tan version."
     },
-	"AddGearTan_Trooper_Clean": {
+	"AddGearTan_Trooper": {
         "Name": "HighCom Trooper TFO body armor (Desert Tan)",
 		"ShortName": "Trooper",
 		"Description": "A plate armor vest by HighCom. The lightweight AR500 class 4 (Russian GOST) protection plates cover only the chest and back areas. Desert Tan version."

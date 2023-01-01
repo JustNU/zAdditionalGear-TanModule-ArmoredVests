@@ -29,12 +29,12 @@
 		"BundlePath": "AddGearTan/ArmoredVests/untarvest.bundle",
 		"LootWeigthMult": 0.25
 	},
-	"AddGearTan_Trooper": {
+	"AddGearTan_Trooper_USEC": {
 		"BaseItemID": "5c0e655586f774045612eeb2",
 		"BundlePath": "AddGearTan/ArmoredVests/trooper.bundle",
 		"LootWeigthMult": 0.25
 	},
-	"AddGearTan_Trooper_Clean": {
+	"AddGearTan_Trooper": {
 		"BaseItemID": "5c0e655586f774045612eeb2",
 		"BundlePath": "AddGearTan/ArmoredVests/trooper_clean.bundle",
 		"LootWeigthMult": 0.25
