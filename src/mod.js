@@ -32,40 +32,6 @@ class Mod
 			}
 		}
 		
-		// deal with edge cases
-		// GEN4 light
-		if (itemConfig["Armored Vests"]["AddGearTan_GEN4_Light"]) {
-			core.addItemRetexture(modDb, "AddGearTan_GEN4_Light", itemData["AddGearTan_GEN4_Light"].BaseItemID, itemData["AddGearTan_GEN4_Light"].BundlePath, false, config.AddToBots, itemData["AddGearTan_GEN4_Light"].LootWeigthMult);
-			
-			// change stats
-			const gen4Light = database.templates.items["AddGearTan_GEN4_Light"];
-			gen4Light._props.Weight = 10;
-			gen4Light._props.Height = 3;
-			gen4Light._props.Durability = Math.round(gen4Light._props.MaxDurability - (gen4Light._props.MaxDurability * 0.08));
-			gen4Light._props.MaxDurability = Math.round(gen4Light._props.MaxDurability - (gen4Light._props.MaxDurability * 0.08))
-			
-			if (gen4Light._props.speedPenaltyPercent != 0)
-				gen4Light._props.speedPenaltyPercent = gen4Light._props.speedPenaltyPercent + 1;
-			if (gen4Light._props.mousePenalty != 0)
-				gen4Light._props.mousePenalty = gen4Light._props.mousePenalty + 1;
-			if (gen4Light._props.weaponErgonomicPenalty != 0)
-				gen4Light._props.weaponErgonomicPenalty = gen4Light._props.weaponErgonomicPenalty + 1;
-			
-			// change price
-			database.templates.prices["AddGearTan_GEN4_Light"] = 85000;
-			
-			for (const handbookItemIndex in database.templates.handbook.Items) {
-				if (database.templates.handbook.Items[handbookItemIndex].Id === "AddGearTan_GEN4_Light") {
-					database.templates.handbook.Items[handbookItemIndex].Price = 85000;
-					break;
-				}
-			}
-			
-			// add trade offer
-			if (config.EnableTradeOffers)
-				core.createTraderOffer("AddGearTan_GEN4_Light", "5ac3b934156ae10c4430e83c", "5449016a4bdc2d6f028b456f", 90222, 3)
-		}
-		
 		// Modify quests
 		if (config.EnableQuestChanges) {
 			const armoredVests = [
@@ -118,6 +84,46 @@ class Mod
 					...armoredVests
 				];
 			}
+		}
+		
+		// deal with edge cases
+		// GEN4 light
+		if (itemConfig["Armored Vests"]["AddGearTan_GEN4_Light"]) {
+			core.addItemRetexture(modDb, "AddGearTan_GEN4_Light", itemData["AddGearTan_GEN4_Light"].BaseItemID, itemData["AddGearTan_GEN4_Light"].BundlePath, false, config.AddToBots, itemData["AddGearTan_GEN4_Light"].LootWeigthMult);
+			
+			// change stats
+			const gen4Light = database.templates.items["AddGearTan_GEN4_Light"];
+			
+			if (gen4Light._props.Weight > 0)
+				gen4Light._props.Weight = 10;
+			if (gen4Light._props.Width != 1 && gen4Light._props.Height != 1) {
+				gen4Light._props.Height = 3;
+				gen4Light._props.Width = 3;
+			}
+			
+			gen4Light._props.Durability = Math.round(gen4Light._props.MaxDurability - (gen4Light._props.MaxDurability * 0.08));
+			gen4Light._props.MaxDurability = Math.round(gen4Light._props.MaxDurability - (gen4Light._props.MaxDurability * 0.08));
+			
+			if (gen4Light._props.speedPenaltyPercent != 0)
+				gen4Light._props.speedPenaltyPercent = gen4Light._props.speedPenaltyPercent + 1;
+			if (gen4Light._props.mousePenalty != 0)
+				gen4Light._props.mousePenalty = gen4Light._props.mousePenalty + 1;
+			if (gen4Light._props.weaponErgonomicPenalty != 0)
+				gen4Light._props.weaponErgonomicPenalty = gen4Light._props.weaponErgonomicPenalty + 1;
+			
+			// change price
+			database.templates.prices["AddGearTan_GEN4_Light"] = 85000;
+			
+			for (const handbookItemIndex in database.templates.handbook.Items) {
+				if (database.templates.handbook.Items[handbookItemIndex].Id === "AddGearTan_GEN4_Light") {
+					database.templates.handbook.Items[handbookItemIndex].Price = 85000;
+					break;
+				}
+			}
+			
+			// add trade offer
+			if (config.EnableTradeOffers)
+				core.createTraderOffer("AddGearTan_GEN4_Light", "5ac3b934156ae10c4430e83c", "5449016a4bdc2d6f028b456f", 90222, 3)
 		}
 	}
 }
