@@ -48,5 +48,10 @@
 		"BaseItemID": "5df8a2ca86f7740bfe6df777",
 		"BundlePath": "AddGearTan/ArmoredVests/6B2.bundle",
 		"LootWeigthMult": 0.25
+	},
+	"AddGearTan_GEN4_Light": {
+		"BaseItemID": "5b44d0de86f774503d30cba8",
+		"BundlePath": "AddGearTan/ArmoredVests/gen4_light.bundle",
+		"LootWeigthMult": 0.25
 	}
 }

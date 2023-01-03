@@ -48,5 +48,10 @@
 		"Name": "6B2 body armor (Desert Tan)",
 		"ShortName": "6B2",
 		"Description": "An old army body armor from Afghanistan war times, mainly designed to protect against pistol bullets and explosion fragments. It fulfilled its mission, but was soon replaced by bulletproof vests with differentiated protection."
+    },
+	"AddGearTan_GEN4_Light": {
+        "Name": "IOTV Gen4 armor (Desert Tan, light kit)",
+		"ShortName": "Gen4 Light",
+		"Description": "The Improved Outer Tactical Vest (IOTV) Gen IV is designed to permit maximum freedom of movement required to assume correct firing positions with the agility to execute and maneuver tasks. Optimal design characteristics ensure the best possible weight distribution of both the ballistic body armor system as well as additional load bearing equipment, thus providing enhanced comfort, wear duration, and mobility. Light kit."
     }
 }

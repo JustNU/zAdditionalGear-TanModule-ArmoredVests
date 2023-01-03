@@ -49,6 +49,15 @@
 			]
         },
 		{
+            "key": "AddGearTan/ArmoredVests/gen4_light.bundle",
+            "dependencyKeys": [
+				"assets/commonassets/physics/physicsmaterials.bundle",
+				"shaders",
+				"AddGearTan/ArmoredVests/gen4_textures.bundle",
+				"cubemaps"
+			]
+        },
+		{
             "key": "AddGearTan/ArmoredVests/trooper.bundle",
             "dependencyKeys": [
 				"assets/commonassets/physics/physicsmaterials.bundle",
