@@ -41,8 +41,8 @@ class Mod
 			const gen4Light = database.templates.items["AddGearTan_GEN4_Light"];
 			gen4Light._props.Weight = 10;
 			gen4Light._props.Height = 3;
-			gen4Light._props.Durability = Math.round(gen4Light._props.MaxDurability - (gen4Light._props.MaxDurability * 0.23));
-			gen4Light._props.MaxDurability = Math.round(gen4Light._props.MaxDurability - (gen4Light._props.MaxDurability * 0.23))
+			gen4Light._props.Durability = Math.round(gen4Light._props.MaxDurability - (gen4Light._props.MaxDurability * 0.08));
+			gen4Light._props.MaxDurability = Math.round(gen4Light._props.MaxDurability - (gen4Light._props.MaxDurability * 0.08))
 			
 			if (gen4Light._props.speedPenaltyPercent != 0)
 				gen4Light._props.speedPenaltyPercent = gen4Light._props.speedPenaltyPercent + 1;
