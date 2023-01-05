@@ -27,7 +27,7 @@ class Mod
 				}
 				
 				if (itemConfig[categoryId][itemId]) {
-					core.addItemRetexture(modDb, itemId, itemData[itemId].BaseItemID, itemData[itemId].BundlePath, config.EnableTradeOffers, config.AddToBots, itemData[itemId].LootWeigthMult);
+					core.addItemRetexture(itemId, itemData[itemId].BaseItemID, itemData[itemId].BundlePath, config.EnableTradeOffers, config.AddToBots, itemData[itemId].LootWeigthMult);
 				}
 			}
 		}
@@ -89,7 +89,7 @@ class Mod
 		// deal with edge cases
 		// GEN4 light
 		if (itemConfig["Armored Vests"]["AddGearTan_GEN4_Light"]) {
-			core.addItemRetexture(modDb, "AddGearTan_GEN4_Light", itemData["AddGearTan_GEN4_Light"].BaseItemID, itemData["AddGearTan_GEN4_Light"].BundlePath, false, config.AddToBots, itemData["AddGearTan_GEN4_Light"].LootWeigthMult);
+			core.addItemRetexture("AddGearTan_GEN4_Light", itemData["AddGearTan_GEN4_Light"].BaseItemID, itemData["AddGearTan_GEN4_Light"].BundlePath, false, config.AddToBots, itemData["AddGearTan_GEN4_Light"].LootWeigthMult);
 			
 			// change stats
 			const gen4Light = database.templates.items["AddGearTan_GEN4_Light"];
