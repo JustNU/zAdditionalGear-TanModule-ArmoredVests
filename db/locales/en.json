@@ -1,16 +1,16 @@
 {
 	"AddGearTan_GEN4_Full": {
-        "Name": "IOTV Gen4 armor (Desert Tan, full protection)",
+        "Name": "IOTV Gen4 armor (full protection, Desert Tan)",
 		"ShortName": "Gen4 Full",
 		"Description": "The Improved Outer Tactical Vest (IOTV) Gen IV is designed to permit maximum freedom of movement required to assume correct firing positions with the agility to execute and maneuver tasks. Optimal design characteristics ensure the best possible weight distribution of both the ballistic body armor system as well as additional load bearing equipment, thus providing enhanced comfort, wear duration, and mobility. Full protection kit."
     },
 	"AddGearTan_GEN4_Assault": {
-        "Name": "IOTV Gen4 armor (Desert Tan, assault kit)",
+        "Name": "IOTV Gen4 armor (assault kit, Desert Tan)",
 		"ShortName": "Gen4 Assault",
 		"Description": "The Improved Outer Tactical Vest (IOTV) Gen IV is designed to permit maximum freedom of movement required to assume correct firing positions with the agility to execute and maneuver tasks. Optimal design characteristics ensure the best possible weight distribution of both the ballistic body armor system as well as additional load bearing equipment, thus providing enhanced comfort, wear duration, and mobility. Increased ergonomics assault kit."
     },
 	"AddGearTan_GEN4_Mobility": {
-        "Name": "IOTV Gen4 armor (Desert Tan, high mobility kit)",
+        "Name": "IOTV Gen4 armor (high mobility kit, Desert Tan)",
 		"ShortName": "Gen4 HMK",
 		"Description": "The Improved Outer Tactical Vest (IOTV) Gen IV is designed to permit maximum freedom of movement required to assume correct firing positions with the agility to execute and maneuver tasks. Optimal design characteristics ensure the best possible weight distribution of both the ballistic body armor system as well as additional load bearing equipment, thus providing enhanced comfort, wear duration, and mobility. Increased mobility and comfort kit."
     },
@@ -30,7 +30,7 @@
 		"Description": "A class III body armor used by PMCs and security forces all around the world."
     },
 	"AddGearTan_Trooper_USEC": {
-        "Name": "HighCom Trooper TFO body armor (Desert Tan, USEC)",
+        "Name": "HighCom Trooper TFO body armor (USEC, Desert Tan)",
 		"ShortName": "Trooper",
 		"Description": "A plate armor vest by HighCom, popular among USEC PMCs. The lightweight AR500 class 4 (Russian GOST) protection plates cover only the chest and back areas. Desert Tan version."
     },
@@ -50,8 +50,13 @@
 		"Description": "An old army body armor from Afghanistan war times, mainly designed to protect against pistol bullets and explosion fragments. It fulfilled its mission, but was soon replaced by bulletproof vests with differentiated protection."
     },
 	"AddGearTan_GEN4_Light": {
-        "Name": "IOTV Gen4 armor (Desert Tan, light kit)",
+        "Name": "IOTV Gen4 armor (light kit, Desert Tan)",
 		"ShortName": "Gen4 Light",
-		"Description": "The Improved Outer Tactical Vest (IOTV) Gen IV is designed to permit maximum freedom of movement required to assume correct firing positions with the agility to execute and maneuver tasks. Optimal design characteristics ensure the best possible weight distribution of both the ballistic body armor system as well as additional load bearing equipment, thus providing enhanced comfort, wear duration, and mobility. Barebones kit with no accessories."
+		"Description": "The Improved Outer Tactical Vest (IOTV) Gen IV is designed to permit maximum freedom of movement required to assume correct firing positions with the agility to execute and maneuver tasks. Optimal design characteristics ensure the best possible weight distribution of both the ballistic body armor system as well as additional load bearing equipment, thus providing enhanced comfort, wear duration, and mobility. Light kit."
+    },
+	"AddGearTan_ANA_M2_Armor": {
+        "Name": "ANA Tactical M2 plate carrier (Tan)",
+		"ShortName": "ANA M2 Plate",
+		"Description": "A tactical rig with additional class 4 (Russian GOST) armor plates. The vest is created with the use of the best experience of Russian special forces operators. The versatility of the system makes it possible to use this vest both when carrying out city tasks and when performing tasks on rough terrain. Plate carrier variant. Manufactured by ANA Tactical."
     }
 }

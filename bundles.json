@@ -104,6 +104,14 @@
 				"cubemaps",
 				"assets/commonassets/physics/physicsmaterials.bundle"
             ]
+        },
+		{
+            "key": "AddGearTan/ArmoredVests/ana_m2_armor.bundle",
+            "dependencyKeys": [
+                "shaders",
+				"cubemaps",
+				"assets/commonassets/physics/physicsmaterials.bundle"
+            ]
         }
     ]
 }

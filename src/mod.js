@@ -1,8 +1,8 @@
 ﻿"use strict";
+const customItemsFunctions = require("./customItems.js");
 
 class Mod
 {
-	
 	postDBLoad(container) 
 	{
 		// Constants
@@ -10,22 +10,67 @@ class Mod
 		const database = container.resolve("DatabaseServer").getTables();
 		const jsonUtil = container.resolve("JsonUtil");
 		const core = container.resolve("JustNUCore");
+		const VFS = container.resolve("VFS");
 		const modDb = `user/mods/zAdditionalGear-TanModule-ArmoredVests/db/`;
 		const config = require("../config/config.json");
 		const itemConfig = require("../config/itemConfig.json");
 		const itemData = require("../db/items/itemData.json");
+		const enLocale = jsonUtil.deserialize(VFS.readFile(`${modDb}/locales/en.json`));
 		
 		// edge cases
-		const edgeCases = ["AddGearTan_GEN4_Light"];
+		const customItems = [
+			"AddGearTan_GEN4_Light",
+			"AddGearTan_ANA_M2_Armor"
+		];
 		
 		//add retextures
 		for (const categoryId in itemConfig) {
 			for (const itemId in itemConfig[categoryId]) {
-				// skip edge cases, handle them later
-				if (edgeCases.includes(itemId)) {
+				// handle locale
+				for (const localeID in database.locales.global) {
+					
+					// en placeholder
+					if (enLocale[itemId]) {
+						if (enLocale[itemId].Name)
+							database.locales.global[localeID][`${itemId} Name`] = enLocale[itemId].Name;
+						if (enLocale[itemId].ShortName)
+							database.locales.global[localeID][`${itemId} ShortName`] = enLocale[itemId].ShortName;
+						if (enLocale[itemId].Description)
+							database.locales.global[localeID][`${itemId} Description`] = enLocale[itemId].Description;
+					}
+					// actual locale
+					if (VFS.exists(`${modDb}/locales/${localeID}.json`) && localeID != "en") {
+						const actualLocale = jsonUtil.deserialize(VFS.readFile(`${modDb}/locales/${localeID}.json`));
+
+						if (actualLocale[itemId]) {
+							if (actualLocale[itemId].Name)
+								database.locales.global[localeID][`${itemId} Name`] = actualLocale[itemId].Name;
+							if (actualLocale[itemId].ShortName)
+								database.locales.global[localeID][`${itemId} ShortName`] = actualLocale[itemId].ShortName;
+							if (actualLocale[itemId].Description)
+								database.locales.global[localeID][`${itemId} Description`] = actualLocale[itemId].Description;
+						}
+					}
+					
+					// replace some default locale
+					if (VFS.exists(`${modDb}/localesReplace/${localeID}.json`)) {
+						const replaceLocale = jsonUtil.deserialize(VFS.readFile(`${modDb}/localesReplace/en.json`));
+						
+						for (const localeItem in replaceLocale) {
+							for (const localeItemEntry in replaceLocale[localeItem]) {
+								database.locales.global[localeID][`${localeItem} ${localeItemEntry}`] = replaceLocale[localeItem][localeItemEntry];
+							}
+						}
+					}
+					
+				}
+				
+				// skip custom itens, handle them later
+				if (customItems.includes(itemId)) {
 					continue;
 				}
 				
+				// add item retexture that is 1:1 to original item
 				if (itemConfig[categoryId][itemId]) {
 					core.addItemRetexture(itemId, itemData[itemId].BaseItemID, itemData[itemId].BundlePath, config.EnableTradeOffers, config.AddToBots, itemData[itemId].LootWeigthMult);
 				}
@@ -45,7 +90,8 @@ class Mod
 				["AddGearTan_Trooper_Clean"],
 				["AddGearTan_PACA"],
 				["AddGearTan_6B2"],
-				["AddGearTan_GEN4_Light"]
+				["AddGearTan_GEN4_Light"],
+				["AddGearTan_ANA_M2_Armor"]
 			];
 				
 			const punisher5Gear = [
@@ -86,45 +132,8 @@ class Mod
 			}
 		}
 		
-		// deal with edge cases
-		// GEN4 light
-		if (itemConfig["Armored Vests"]["AddGearTan_GEN4_Light"]) {
-			core.addItemRetexture("AddGearTan_GEN4_Light", itemData["AddGearTan_GEN4_Light"].BaseItemID, itemData["AddGearTan_GEN4_Light"].BundlePath, false, config.AddToBots, itemData["AddGearTan_GEN4_Light"].LootWeigthMult);
-			
-			// change stats
-			const gen4Light = database.templates.items["AddGearTan_GEN4_Light"];
-			
-			if (gen4Light._props.Weight > 0)
-				gen4Light._props.Weight = 10;
-			if (gen4Light._props.Width != 1 && gen4Light._props.Height != 1) {
-				gen4Light._props.Height = 3;
-				gen4Light._props.Width = 3;
-			}
-			
-			gen4Light._props.Durability = Math.round(gen4Light._props.MaxDurability - (gen4Light._props.MaxDurability * 0.08));
-			gen4Light._props.MaxDurability = Math.round(gen4Light._props.MaxDurability - (gen4Light._props.MaxDurability * 0.08));
-			
-			if (gen4Light._props.speedPenaltyPercent != 0)
-				gen4Light._props.speedPenaltyPercent = gen4Light._props.speedPenaltyPercent + 1;
-			if (gen4Light._props.mousePenalty != 0)
-				gen4Light._props.mousePenalty = gen4Light._props.mousePenalty + 1;
-			if (gen4Light._props.weaponErgonomicPenalty != 0)
-				gen4Light._props.weaponErgonomicPenalty = gen4Light._props.weaponErgonomicPenalty + 1;
-			
-			// change price
-			database.templates.prices["AddGearTan_GEN4_Light"] = 85000;
-			
-			for (const handbookItemIndex in database.templates.handbook.Items) {
-				if (database.templates.handbook.Items[handbookItemIndex].Id === "AddGearTan_GEN4_Light") {
-					database.templates.handbook.Items[handbookItemIndex].Price = 85000;
-					break;
-				}
-			}
-			
-			// add trade offer
-			if (config.EnableTradeOffers)
-				core.createTraderOffer("AddGearTan_GEN4_Light", "5ac3b934156ae10c4430e83c", "5449016a4bdc2d6f028b456f", 90222, 3)
-		}
+		// deal with custom items
+		customItemsFunctions.handleCustomItems(database, core, config, itemConfig, itemData);
 	}
 }
 
