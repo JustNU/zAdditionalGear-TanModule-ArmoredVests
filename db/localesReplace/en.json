@@ -18,6 +18,10 @@
         "Name": "HighCom Trooper TFO body armor (USEC, Multicam)"
 	},
 	"5ab8dced86f774646209ec87": {
-        "ShortName": "ANA M2 Rig"
+        "Name": "ANA Tactical M2 armored rig",
+		"ShortName": "ANA M2 Rig"
+	},
+	"5c0e655586f774045612eeb2": {
+        "Name": "HighCom Trooper TFO body armor (USEC, Multicam)"
 	}
 }
