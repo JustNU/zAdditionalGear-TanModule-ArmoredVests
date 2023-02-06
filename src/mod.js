@@ -20,7 +20,8 @@ class Mod
 		// custom items
 		const customItems = [
 			"AddGearTan_GEN4_Light",
-			"AddGearTan_ANA_M2_Armor"
+			"AddGearTan_ANA_M2_Armor",
+			"AddGearTan_TacTec_Armor"
 		];
 		
 		//add retextures
@@ -91,7 +92,8 @@ class Mod
 				["AddGearTan_PACA"],
 				["AddGearTan_6B2"],
 				["AddGearTan_GEN4_Light"],
-				["AddGearTan_ANA_M2_Armor"]
+				["AddGearTan_ANA_M2_Armor"],
+				["AddGearTan_TacTec_Armor"]
 			];
 				
 			const punisher5Gear = [

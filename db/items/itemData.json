@@ -58,5 +58,10 @@
 		"BaseItemID": "5c0e53c886f7747fa54205c7",
 		"BundlePath": "AddGearTan/ArmoredVests/ana_m2_armor.bundle",
 		"LootWeigthMult": 0.25
+	},
+	"AddGearTan_TacTec_Armor": {
+		"BaseItemID": "5fd4c474dd870108a754b241",
+		"BundlePath": "AddGearTan/ArmoredVests/tactec_armor.bundle",
+		"LootWeigthMult": 0.25
 	}
 }
