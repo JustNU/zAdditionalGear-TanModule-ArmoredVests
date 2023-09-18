@@ -55,13 +55,13 @@
 		"Description": "The Improved Outer Tactical Vest (IOTV) Gen IV is designed to permit maximum freedom of movement required to assume correct firing positions with the agility to execute and maneuver tasks. Optimal design characteristics ensure the best possible weight distribution of both the ballistic body armor system as well as additional load bearing equipment, thus providing enhanced comfort, wear duration, and mobility. Light kit."
     },
 	"AddGearTan_ANA_M2_Armor": {
-        "Name": "ANA Tactical M2 plate carrier (Tan)",
-		"ShortName": "ANA M2 Plate",
+        "Name": "ANA Tactical M2 armor (Tan)",
+		"ShortName": "ANA M2 armor",
 		"Description": "A tactical rig with additional class 4 (Russian GOST) armor plates. The vest is created with the use of the best experience of Russian special forces operators. The versatility of the system makes it possible to use this vest both when carrying out city tasks and when performing tasks on rough terrain. Plate carrier variant. Manufactured by ANA Tactical."
     },
 	"AddGearTan_TacTec_Armor": {
-        "Name": "5.11 Tactical TacTec plate carrier (Tan)",
-		"ShortName": "TacTec Plate",
+        "Name": "5.11 Tactical TacTec armor (Tan)",
+		"ShortName": "TacTec armor",
 		"Description": "A plate carrier with armor plates made of polyethylene (Russian GOST class 5 protection). Manufactured by 5.11 Tactical."
     }
 }
