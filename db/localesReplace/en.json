@@ -15,7 +15,8 @@
         "Name": "PACA Soft Armor (Black)"
 	},
 	"5c0e655586f774045612eeb2": {
-        "Name": "HighCom Trooper TFO body armor (USEC, Multicam)"
+        "Name": "HighCom Trooper TFO body armor (USEC, Multicam)",
+		"ShortName": "Trooper USEC",
 	},
 	"5ab8dced86f774646209ec87": {
 		"ShortName": "ANA M2 Rig"
