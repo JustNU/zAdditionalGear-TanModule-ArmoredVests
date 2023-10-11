@@ -25,8 +25,8 @@
 		"Description": "The Hexgrid plate carrier with smooth ergonomic access that allows comfortable movement, intended for use with chest rigs. Manufactured by 5.11 Tactical."
     },
 	"AddGearTan_UntarVest": {
-        "Name": "Light Military Flak Jacket (Tan)",
-		"ShortName": "Flak",
+        "Name": "Light Military Flak Vest (Tan)",
+		"ShortName": "Flak Vest",
 		"Description": "A class III body armor used by PMCs and security forces all around the world."
     },
 	"AddGearTan_Trooper_USEC": {
