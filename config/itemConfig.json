@@ -1,17 +1,19 @@
 {
 	"Armored Vests": {
+		"AddGearTan_6B2": true,
+		"AddGearTan_Hexgrid": true,
+		"AddGearTan_TacTec_Armor": true,
+		"AddGearTan_6B13": true,
+		"AddGearTan_6B23_1": true,
+		"AddGearTan_6B23_2": true,
 		"AddGearTan_GEN4_Full": true,
 		"AddGearTan_GEN4_Assault": true,
 		"AddGearTan_GEN4_Mobility": true,
 		"AddGearTan_GEN4_Light": true,
-		"AddGearTan_6B13": true,
-		"AddGearTan_Hexgrid": true,
 		"AddGearTan_UntarVest": true,
 		"AddGearTan_Trooper_USEC": true,
 		"AddGearTan_Trooper": true,
 		"AddGearTan_PACA": true,
-		"AddGearTan_6B2": true,
-		"AddGearTan_ANA_M2_Armor": true,
-		"AddGearTan_TacTec_Armor": true
+		"AddGearTan_ANA_M2_Armor": true
 	}
 }

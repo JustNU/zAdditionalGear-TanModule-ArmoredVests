@@ -11,7 +11,6 @@ class Mod
 		const jsonUtil = container.resolve("JsonUtil");
 		const core = container.resolve("JustNUCore");
 		const VFS = container.resolve("VFS");
-		const modDb = `user/mods/zAdditionalGear-TanModule-ArmoredVests/db/`;
 		const config = require("../config/config.json");
 		const itemConfig = require("../config/itemConfig.json");
 		const itemData = require("../db/items/itemData.json");
@@ -88,7 +87,9 @@ class Mod
 				["AddGearTan_6B2"],
 				["AddGearTan_GEN4_Light"],
 				["AddGearTan_ANA_M2_Armor"],
-				["AddGearTan_TacTec_Armor"]
+				["AddGearTan_TacTec_Armor"],
+				["AddGearTan_6B23_1"],
+				["AddGearTan_6B23_2"]
 			];
 				
 			const punisher5Gear = [

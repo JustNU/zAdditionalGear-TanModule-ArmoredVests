@@ -63,5 +63,15 @@
 		"BaseItemID": "5fd4c474dd870108a754b241",
 		"BundlePath": "AddGearTan/ArmoredVests/tactec_armor.bundle",
 		"LootWeigthMult": 0.25
+	},
+	"AddGearTan_6B23_1": {
+		"BaseItemID": "5c0e5bab86f77461f55ed1f3",
+		"BundlePath": "AddGearTan/ArmoredVests/6b23.bundle",
+		"LootWeigthMult": 0.25
+	},
+	"AddGearTan_6B23_2": {
+		"BaseItemID": "5c0e57ba86f7747fa141986d",
+		"BundlePath": "AddGearTan/ArmoredVests/6b23.bundle",
+		"LootWeigthMult": 0.25
 	}
 }

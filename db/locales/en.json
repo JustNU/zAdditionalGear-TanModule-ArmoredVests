@@ -63,5 +63,15 @@
         "Name": "5.11 Tactical TacTec armor (Tan)",
 		"ShortName": "TacTec armor",
 		"Description": "A plate carrier with armor plates made of polyethylene (Russian GOST class 5 protection). Manufactured by 5.11 Tactical."
+    },
+	"AddGearTan_6B23_1": {
+        "Name": "6B23-1 body armor (Tan)",
+		"ShortName": "6B23-1 Tan",
+		"Description": "The \"Zabralo-8\" main armored vest for personnel of combat units of the ground forces, airborne troops, marines, etc. The vest is designed to protect vital organs from being hit by firearms, shell fragments, mines, grenades, and cold weapons, reducing the severity of armor contusion injury when performing combat missions."
+    },
+	"AddGearTan_6B23_2": {
+        "Name": "6B23-2 body armor (Tan)",
+		"ShortName": "6B23-2 Tan",
+		"Description": "The \"Zabralo-8\" main armored vest for personnel of combat units of the ground forces, airborne troops, marines, etc. The vest is designed to protect vital organs from being hit by firearms, shell fragments, mines, grenades, and cold weapons, reducing the severity of armor contusion injury when performing combat missions."
     }
 }
